@@ -1,0 +1,99 @@
+@import '../../styles/variables';
+
+.keyboard {
+  transform: rotateX(60deg) rotateZ(45deg);
+  transform-style: preserve-3d;
+  background: $navy-medium;
+  border-radius: 32px;
+  padding: 32px;
+  box-shadow: inset 16px 16px 0 6.4px $grey-dark;
+  display: flex;
+  gap: 0 32px;
+  position: relative;
+  margin-top: 20px;
+  margin-right: 150px;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 32px 0;
+
+    .row {
+      display: flex;
+      gap: 0 32px;
+
+      &:not(:first-child) {
+        filter: drop-shadow(32px -8px 8px rgba(51, 65, 85, 0.3));
+        .key3D:not(:first-child) {
+          filter: drop-shadow(-8px 8px 8px rgba(51, 65, 85, 0.3));
+        }
+      }
+
+      > .key3D.span {
+        flex: 1;
+
+        .side {
+          width: 120%;
+          height: 237%;
+          transform: rotateZ(45deg) translate(24%, -14%) skew(337deg);
+          background-image: linear-gradient($grey-light 25%, $grey-medium 30%);
+        }
+
+        .top {
+          &::before {
+            transform: translate(5%, 5%);
+          }
+
+          &::after {
+            background-image: linear-gradient(
+              -25deg,
+              transparent 45%,
+              $grey-light 55%
+            );
+          }
+        }
+      }
+    }
+  }
+
+  .cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    border-radius: 32px;
+    box-shadow: inset -4.8px -4.8px 1.6px 3.2px $grey-light,
+      inset -16px -16px 0 6.4px #cbd5e1, inset -32px -32px 32px -9.6px $grey-dark,
+      0 0 $grey-light, 4.8px 4.8px $grey-light, 9.6px 9.6px $grey-light,
+      14.4px 14.4px $grey-light, 19.2px 19.2px $grey-light, 24px 24px $grey-light,
+      28.8px 28.8px $grey-light, 33.6px 33.6px $grey-light, 38.4px 38.4px $grey-light,
+      43.2px 43.2px $grey-light, 48px 48px $grey-light, 52.8px 52.8px $grey-light,
+      57.6px 57.6px $grey-light, 62.4px 62.4px $grey-light, 67.2px 67.2px $grey-light,
+      72px 72px $grey-light, 76.8px 76.8px $grey-light, 81.6px 81.6px $grey-light,
+      86.4px 86.4px $grey-light, 91.2px 91.2px $grey-light, 96px 96px $grey-light,
+      100.8px 100.8px $grey-light, 105.6px 105.6px $grey-light, 110.4px 110.4px $grey-light,
+      115.2px 115.2px $grey-light, 120px 120px $grey-light,
+      128px 160px 32px rgba(15, 23, 42, 0.2),
+      128px 128px 8px rgba(15, 23, 42, 0.2);
+
+    &.dark {
+      box-shadow: inset -4.8px -4.8px 1.6px 3.2px $grey-light,
+        inset -16px -16px 0 6.4px #cbd5e1, inset -32px -32px 32px -9.6px $grey-dark,
+        0 0 $navy-extra-dark, 4.8px 4.8px $navy-extra-dark, 9.6px 9.6px $navy-extra-dark,
+        14.4px 14.4px $navy-extra-dark, 19.2px 19.2px $navy-extra-dark, 24px 24px $navy-extra-dark,
+        28.8px 28.8px $navy-extra-dark, 33.6px 33.6px $navy-extra-dark, 38.4px 38.4px $navy-extra-dark,
+        43.2px 43.2px $navy-extra-dark, 48px 48px $navy-extra-dark, 52.8px 52.8px $navy-extra-dark,
+        57.6px 57.6px $navy-extra-dark, 62.4px 62.4px $navy-extra-dark, 67.2px 67.2px $navy-extra-dark,
+        72px 72px $navy-extra-dark, 76.8px 76.8px $navy-extra-dark, 81.6px 81.6px $navy-extra-dark,
+        86.4px 86.4px $navy-extra-dark, 91.2px 91.2px $navy-extra-dark, 96px 96px $navy-extra-dark,
+        100.8px 100.8px $navy-extra-dark, 105.6px 105.6px $navy-extra-dark,
+        110.4px 110.4px $navy-extra-dark, 115.2px 115.2px $navy-extra-dark, 120px 120px $navy-extra-dark,
+        128px 160px 32px rgba(15, 23, 42, 0.2),
+        128px 128px 8px rgba(15, 23, 42, 0.2);
+    }
+  }
+}
+
+

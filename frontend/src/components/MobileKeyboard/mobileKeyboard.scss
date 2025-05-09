@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.mobile-keyboard {
+  display: flex;
+  flex-direction: column;
+  background-color: $grey-medium;
+  padding: 20px;
+  gap: 12px;
+  border-radius: 16px;
+  height: 390px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  .row {
+    display: flex;
+    gap: 30px;
+  }
+}

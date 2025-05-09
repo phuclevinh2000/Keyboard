@@ -1,0 +1,8 @@
+### Just to see if it works...
+GET http://localhost:3001/
+
+### Search for words in strict matching mode
+GET http://localhost:3001/search/exact/4663
+
+### Search for words in prefix matching mode
+GET http://localhost:3001/search/prefix/4663

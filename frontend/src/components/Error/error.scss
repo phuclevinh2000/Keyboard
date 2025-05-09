@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.error-container {
+  color: $red-dark;
+  background-color: $orange-light;
+  display: flex;
+  align-items: center;
+  width: 450px;
+  border-radius: 32px;
+  padding: 16px;
+  gap: 20px;
+
+  .error-title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .error-description {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}

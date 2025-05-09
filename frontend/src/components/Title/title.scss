@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin-left: -125px;
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 0.9;
+  user-select: none;
+
+  .title-first-line {
+    font-size: 70px;
+    font-weight: 600;
+    color: $grey-dark;
+
+    &.dark {
+      color: $grey-medium;
+    }
+  }
+
+  .title-second-line {
+    font-size: 100px;
+    font-weight: 900;
+    color: $violet;
+
+    &.dark {
+      color: $violet-medium;
+    }
+  }
+
+}
